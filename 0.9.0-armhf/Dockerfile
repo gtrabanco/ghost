@@ -4,12 +4,12 @@ FROM resin/raspberrypi2-node:4-slim
 
 USER root
 
+RUN groupadd user && useradd --create-home --home-dir /home/user -g user user
+
 RUN apt-get update && apt-get install -y \
 		ca-certificates \
 		wget \
 	--no-install-recommends && rm -rf /var/lib/apt/lists/*
-
-RUN groupadd user && useradd --create-home --home-dir /home/user -g user user
 
 # grab gosu for easy step-down from root
 ENV GOSU_VERSION 1.9
