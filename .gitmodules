@@ -1,0 +1,3 @@
+[submodule "official-ghost-no-arm"]
+	path = official-ghost-no-arm
+	url = https://github.com/docker-library/ghost
