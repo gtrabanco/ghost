@@ -2,6 +2,8 @@
 # https://github.com/nodejs/LTS
 FROM resin/raspberrypi2-node:4-slim
 
+USER root
+
 RUN apt-get update && apt-get install -y \
 		ca-certificates \
 		wget \
